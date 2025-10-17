@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "User form",
+  "description": "Collect base information about the user",
+  "type": "object",
+  "required": ["firstName", "email", "acceptTerms"],
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "title": "First name",
+      "minLength": 2
+    },
+    "age": {
+      "type": "number",
+      "title": "Age",
+      "minimum": 0
+    },
+    "email": {
+      "type": "string",
+      "title": "Email"
+    },
+    "favoriteColor": {
+      "type": "string",
+      "title": "Favorite color",
+      "enum": ["Red", "Green", "Blue"]
+    },
+    "birthday": {
+      "type": "string",
+      "format": "date",
+      "title": "Birthday"
+    },
+    "acceptTerms": {
+      "type": "boolean",
+      "title": "I accept the terms and conditions"
+    }
+  }
+}
